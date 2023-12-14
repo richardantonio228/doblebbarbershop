@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boton{
+    @include m.boton(v.$azul, v.$blanco);
+    
+    @include m.tablet{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  
+
+    }
+   
+}
+
+.boton-eliminar{
+    @include m.boton(v.$rojo, v.$blanco);
+}

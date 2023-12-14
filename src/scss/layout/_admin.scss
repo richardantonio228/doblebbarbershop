@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.panel{
+    h1,h2,h3{
+        color: v.$azulselect;
+    }
+  
+}
+
+
+.citas{
+    list-style: none;
+
+    li{
+        padding: 1rem;
+        border-top: 1px solid v.$negro;
+        p{
+            font-weight: v.$bold;
+            color: v.$azul;
+        }
+        span,.servicio{
+            font-weight: v.$regular;
+            color: v.$negro;
+
+        }
+    }
+}
+//Para herredar los estilos de citas
+.servicios{
+    @extend .citas;
+
+    .acciones{
+        margin: 0;
+       
+    }
+    .boton,.boton-eliminar{
+        margin: 0 1rem 1rem 0;    
+        
+    }
+    
+}
